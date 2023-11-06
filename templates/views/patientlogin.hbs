@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+      font-family: Arial, sans-serif;
+      background-color: aliceblue;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+    background-color: #333;
+    color: rgb(229, 232, 237);
+    text-align: center;
+    padding: 20px;
+}
+
+    .login-container {
+      background-color: #f3e1e1;
+      border-radius: 1px solid red;
+      width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 94%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: #215ac4;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .page-links {
+      margin-top: 20px;
+    }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+  <nav>
+        <h1>Hospital Management System</h1>
+    </nav>
+    <div class="login-container">
+    <h2>Patient Login</h2>
+    <form action="/patientlogin" method="POST">
+      <input type="text" name="email" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" value="Login">
+    </form>
+    <div class="page-links">
+      <a href="register">Register</a> | <a href="home">Home</a>
+    </div>
+  </div>
+  <footer>
+        &copy; 2023 Hospital Management System
+    </footer>
+</body>
+</html>

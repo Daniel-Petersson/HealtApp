@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    
+    
+    min-height: 100vh;
+    
+}
+nav {
+    background-color: #333;
+    color: rgb(229, 232, 237);
+    text-align: center;
+    padding: 20px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Hospital Management System</h1>
+    </nav>
+    <h1>Doctor will reach out to you soon after review the reports you submitted</h1>
+    {{!-- <ul>
+        {{#each results}}
+            <li>
+                <h2>{{this.name}}</h2>
+                <p>Health Problem: {{this.healthProblem}}</p>
+                <p>Medications: {{this.medications}}</p>
+                <p>Medical History: {{this.medicalHistory}}</p>
+                <p>Other Details: {{this.otherDetails}}</p>
+            </li>
+        {{/each}}
+    </ul> --}}
+    <footer>
+        &copy; 2023 Hospital Management System
+    </footer>
+</body>
+</html>
+

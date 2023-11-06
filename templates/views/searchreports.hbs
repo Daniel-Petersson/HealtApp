@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    
+    
+    min-height: 100vh;
+    
+}
+
+nav {
+    background-color: #333;
+    color: rgb(229, 232, 237);
+    text-align: center;
+    padding: 20px;
+}
+
+.container{
+    height: max-content;
+    width: max-content;
+    
+}
+
+.card{
+    background-color: #f3e1e1;
+    border: 1px solid #a84747;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 425px;
+    height: 200px ;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position:fixed;
+    top: 35%;
+    left: 40%;
+}
+        /* Style the search form */
+.search-form {
+    text-align: center;
+}
+
+/* Style the search input */
+.search-input {
+    width: 300px; /* Adjust the width as needed */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Style the search button */
+.search-button {
+    padding: 10px 20px; /* Adjust the padding as needed */
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the search button on hover */
+.search-button:hover {
+    background-color: #555;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Hospital Management System</h1>
+    </nav>
+
+    <div class="card">
+<div class="container">
+    <form action="/searchreports" method="get" class="search-form">
+        <input type="text" name="q" placeholder="Search reports..." class="search-input">
+        <button type="submit" class="search-button">Search</button>
+    </form>
+    </div>
+<h3>Search for Patient by thier First Name</h3>
+    </div>
+    <footer>
+        &copy; 2023 Hospital Management System
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

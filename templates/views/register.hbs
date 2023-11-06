@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: aliceblue;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+nav {
+    background-color: #333;
+    color: rgb(229, 232, 237);
+    text-align: center;
+    padding: 20px;
+}
+    .registration-container {
+      background-color: #f3e1e1;
+      width: 800px;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    input {
+      width: 95%;
+      padding: 10px;
+      margin: 10px 10px 10px 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: #215ac4;
+      border: 1px solid #5fa847;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .page-links {
+      margin-top: 20px;
+    }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+
+  <nav>
+        <h1>Hospital Management System</h1>
+    </nav>
+
+  <div class="registration-container">
+    <h2>Patient Registration</h2>
+    <form action="/register" method="POST">
+      <input type="text" name="firstname" placeholder="First Name" >
+      <input type="text" name="lastname" placeholder="Last Name" >
+      <input type="text" name="email" placeholder="Email" >
+      <input type="text" name="phone" placeholder="Phone" >
+      <input type="text" name="password" placeholder="Password" >
+      <input type="text" name="confirmpassword" placeholder="Confirm Password" >
+      <div>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" >
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" >
+        <label for="female">Female</label>
+      </div>
+      <input type="submit" value="Register">
+    </form>
+    <div class="page-links">
+      <a href="login">Login</a> | <a href="home">Home</a>
+    </div>
+  </div>
+
+  <footer>
+        &copy; 2023 Hospital Management System
+    </footer>
+</body>
+</html>

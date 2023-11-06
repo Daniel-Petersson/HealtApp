@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Reports</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    
+    
+    min-height: 100vh;
+    
+}
+nav {
+    background-color: #333;
+    color: rgb(229, 232, 237);
+    text-align: center;
+    padding: 20px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+ 
+        /* Apply styles to the table element */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for table headers (th) */
+th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style for table rows (even and odd) */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Style for table cells (td) */
+td {
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #ccc;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Hospital Management System</h1>
+    </nav>
+
+
+    {{!-- <h1>The Concerned Doctor will Review Your Reports and reach out to you soon</h1> --}}
+    {{!-- <ul>
+        {{#each results}}
+            <li>
+                <h2>{{this.name}}</h2>
+                <p>Health Problem: {{this.healthProblem}}</p>
+                <p>Medications: {{this.medications}}</p>
+                <p>Medical History: {{this.medicalHistory}}</p>
+                <p>Other Details: {{this.otherDetails}}</p>
+            </li>
+        {{/each}}
+    </ul> --}}
+
+    <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Health Problem</th>
+      <th>Medications</th>
+      <th>Medical History</th>
+      <th>Other Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each results}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.healthProblem}}</td>
+        <td>{{this.medications}}</td>
+        <td>{{this.medicalHistory}}</td>
+        <td>{{this.otherDetails}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+ <footer>
+        &copy; 2023 Hospital Management System
+    </footer>
+</body>
+</html>

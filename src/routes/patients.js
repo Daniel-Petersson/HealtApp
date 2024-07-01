@@ -70,44 +70,6 @@ router.get("/register", async (req,res) =>{
  });
 
 
-//  router.get("/preports", async (req,res) =>{
-//     res.render("preports");
-//  });
-
-// router.post("/preports", async (req, res) =>{
-//         try {
-
-//             const name = req.body.name;
-//             const pname = await Register.findOne({firstname:name});
-//         if (pname === firstname) {
-
-//             const uploadReport = new Preports({
-
-//                     name : req.body.name,
-//                     healthProblem :req.body.healthProblem,
-//                     medications: req.body.medications,
-//                     medicalHistory : req.body.medicalHistory,
-//                     otherDetails : req.body.otherDetails,
-
-                
-//             });
-
-//             // console.log(`${name} ${healthProblem} ${medications} ${medicalHistory} ${otherDetails} `);
-//             // res.send(`${name} ${healthProblem} ${medications} ${medicalHistory} ${otherDetails} `);
-
-//             const uploadedReport = await uploadReport.save();
-//             res.send(201).render("Reports Saved");
-            
-//         } else {
-//             console.error();
-//         }
-            
-//         } catch (error) {
-//             res.status(400).send(error);
-//         }
-
-// });
-
 
 
 router.get("/preports", async (req, res) => {
@@ -145,22 +107,6 @@ router.post("/preports", async (req, res) => {
         res.status(400).send(error);
     }
 });
-
-
-// router.get("/yourReport", async(req,res)=>{
-
-    
-//     try{
-//         const reports = await Preports.find({});
-//         res.render("viewreports",{reports});
-//     }catch(error){
-//         console.error(error);
-//         res.status(500).send("internal server error");
-
-//     }
-
-
-// } );
 
  module.exports = router;
 

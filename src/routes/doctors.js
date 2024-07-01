@@ -71,9 +71,7 @@ router.post("/dregister", async (req,res) =>{
     }
 });
 
-// router.get("/searchreports", (req,res)=>{
-//     res.render("searchreports");
-// })
+
 //Search reports by first name
 router.get("/searchreports",async (req,res)=>{
     const searchQuery = req.query.q; // Get the search term from the query parameter

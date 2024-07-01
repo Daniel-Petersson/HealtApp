@@ -3,111 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search Reports</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    
-    
-    min-height: 100vh;
-    
-}
-
-nav {
-    background-color: #333;
-    color: rgb(229, 232, 237);
-    text-align: center;
-    padding: 20px;
-}
-
-.container{
-    height: max-content;
-    width: max-content;
-    
-}
-
-.card{
-    background-color: #f3e1e1;
-    border: 1px solid #a84747;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 425px;
-    height: 200px ;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    position:fixed;
-    top: 35%;
-    left: 40%;
-}
-        /* Style the search form */
-.search-form {
-    text-align: center;
-}
-
-/* Style the search input */
-.search-input {
-    width: 300px; /* Adjust the width as needed */
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-radius: 5px;
-}
-
-/* Style the search button */
-.search-button {
-    padding: 10px 20px; /* Adjust the padding as needed */
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Style the search button on hover */
-.search-button:hover {
-    background-color: #555;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+            padding-top: 56px; /* Padding for fixed navbar */
+        }
+        .search-container {
+            background-color: #f3e1e1;
+            width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            padding: 20px 0;
+            background-color: #f5f5f5;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <h1>Hospital Management System</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hospital Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="login">Doctor Login <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="home">Home <i class="fas fa-home"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-
-    <div class="card">
-<div class="container">
-    <form action="/searchreports" method="get" class="search-form">
-        <input type="text" name="q" placeholder="Search reports..." class="search-input">
-        <button type="submit" class="search-button">Search</button>
-    </form>
+    <!-- Page Content -->
+    <div class="container mt-5">
+        <div class="search-container">
+            <h2>Search Reports</h2>
+            <form action="/allreports" method="get" class="mt-5">
+                <button type="submit" class="btn btn-primary">View All Reports</button>
+            </form>
+            <form action="/searchreports" method="get" class="mt-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" placeholder="Search reports by patient's name...">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            
+            <h2 class="mt-5">Search Reports by Status</h2>
+            <form action="/searchbystatus" method="get" class="mt-4">
+                <div class="form-group">
+                    <select name="status" class="form-control">
+                        <option value="Pending">Pending</option>
+                        <option value="In Review">In Review</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
     </div>
-<h3>Search for Patient by thier First Name</h3>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Hospital Management System</p>
     </div>
-    <footer>
-        &copy; 2023 Hospital Management System
-    </footer>
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-

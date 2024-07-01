@@ -28,6 +28,10 @@ const preportsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    status:{
+        type: String,
+        default: "pending",
+    },
 
 })
 

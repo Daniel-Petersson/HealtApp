@@ -72,10 +72,6 @@
     </style>
 </head>
 <body>
-    <nav>
-        <h1>Hospital Management System</h1>
-    </nav>
-
     <div class="container">
         <h2>Patient Problem Registration</h2>
         <form action="/preports" method="POST">
@@ -94,12 +90,20 @@
             <label for="other-details">Other Details:</label>
             <textarea id="other-details" name="otherDetails" rows="4"></textarea>
 
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Pending">Pending</option>
+            <option value="In Review">In Review</option>
+            <option value="Completed">Completed</option>
+        </select>
+
             <input type="submit" value="Submit">
         </form>
     </div>
 
     <footer>
-        &copy; 2023 Hospital Management System
+        &copy; 2024 Hospital Management System
     </footer>
     
 </body>

@@ -128,6 +128,7 @@ router.post("/preports", async (req, res) => {
                 medications: req.body.medications,
                 medicalHistory: req.body.medicalHistory,
                 otherDetails: req.body.otherDetails,
+                status: req.body.status,
             });
 
             const uploadedReport = await uploadReport.save();

@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>Document</title>
-    <style>
- body {
-      font-family: Arial, sans-serif;
-      background-color: aliceblue;
-      text-align: center;
-      margin: 0;
-      padding: 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Login</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      padding-top: 56px; /* Padding for fixed navbar */
     }
-
-    nav {
-    background-color: #333;
-    color: rgb(229, 232, 237);
-    text-align: center;
-    padding: 20px;
-}
-
     .login-container {
       background-color: #f3e1e1;
-      border-radius: 1px solid red;
-      width: 400px;
+      width: 800px;
       margin: 100px auto;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
-
-    h2 {
-      color: #333;
+    .footer {
+      padding: 20px 0;
+      background-color: #f5f5f5;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
     }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 94%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-
-    input[type="submit"] {
-      background-color: #215ac4;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-
-    .page-links {
-      margin-top: 20px;
-    }
-
-    footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
   </style>
 </head>
 <body>
-  <nav>
-        <h1>Hospital Management System</h1>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Hospital Management System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="login">Doctor Login <i class="fas fa-sign-in-alt"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="home">Home <i class="fas fa-home"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Content -->
+  <div class="container mt-5">
     <div class="login-container">
-    <h2>Patient Login</h2>
-    <form action="/patientlogin" method="POST">
-      <input type="text" name="email" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" value="Login">
-    </form>
-    <div class="page-links">
-      <a href="register">Register</a> | <a href="home">Home</a>
+      <h2>Patient Login</h2>
+      <form action="/patientlogin" method="POST" class="mt-4">
+        <div class="form-group">
+          <input type="text" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <div class="page-links mt-3">
+        <a href="register">Register</a> | <a href="home">Home</a>
+      </div>
     </div>
   </div>
-  <footer>
-        &copy; 2023 Hospital Management System
-    </footer>
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2024 Hospital Management System</p>
+  </div>
+  <!-- Bootstrap and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
